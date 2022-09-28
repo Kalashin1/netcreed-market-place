@@ -1,4 +1,9 @@
+import { useNavigate } from "react-router";
+
 const Top = () => {
+
+  const navigate = useNavigate();
+  
   return (
     <header className="header_area">
       <div className="top_menu">
@@ -51,9 +56,18 @@ const Top = () => {
                 <div className="col-lg-7 pr-0">
                   <ul className="nav navbar-nav center_nav pull-right">
                     <li className="nav-item active">
-                      <a className="nav-link" href="index.html">Home</a>
+                      <a className="nav-link" onClick={e => {
+                        e.preventDefault()
+                        navigate('/')
+                      }} href="/">Home</a>
                     </li>
-                    <li className="nav-item submenu dropdown">
+                    <li className="nav-item">
+                      <a className="nav-link" onClick={e => {
+                        e.preventDefault()
+                        navigate('/shop')
+                      }} href="/shop">Shop</a>
+                    </li>
+                    {/* <li className="nav-item submenu dropdown">
                       <a href="!!#" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                         aria-expanded="false">Shop</a>
                       <ul className="dropdown-menu">
@@ -70,33 +84,13 @@ const Top = () => {
                           <a className="nav-link" href="cart.html">Shopping Cart</a>
                         </li>
                       </ul>
-                    </li>
-                    <li className="nav-item submenu dropdown">
-                      <a href="!#" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                        aria-expanded="false">Blog</a>
-                      <ul className="dropdown-menu">
-                        <li className="nav-item">
-                          <a className="nav-link" href="blog.html">Blog</a>
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link" href="single-blog.html">Blog Details</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="nav-item submenu dropdown">
-                      <a href="!#" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                        aria-expanded="false">Pages</a>
-                      <ul className="dropdown-menu">
-                        <li className="nav-item">
-                          <a className="nav-link" href="tracking.html">Tracking</a>
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link" href="elements.html">Elements</a>
-                        </li>
-                      </ul>
-                    </li>
+                    </li> */}
+                    
                     <li className="nav-item">
-                      <a className="nav-link" href="contact.html">Contact</a>
+                      <a className="nav-link" onClick={e => {
+                        e.preventDefault()
+                        navigate('/contact')
+                      }}  href="/contact">Contact</a>
                     </li>
                   </ul>
                 </div>

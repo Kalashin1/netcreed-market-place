@@ -19,7 +19,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route index element={(<Index />)} />
-        <Route path='/category' element={(<Category />)} />
+        <Route path='/shop' element={(<Category />)} />
         <Route path='/product' element={(<ProductPage />)} />
         <Route path='/checkout' element={(<Checkout />)} /> 
         <Route path='/cart' element={(<Cart />)} />
